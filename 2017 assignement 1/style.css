@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*--navigation bar--*/
+#hero{
+    height: 7vh;
+    width: 100%;
+    background: #edf2fc;
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav{
+    width: 80%;
+    margin: auto;
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    width: 80px;
+    left: 0px;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    float: left;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #606163;
+    
+}
+nav ul li a:hover{
+     color: #ff4321;
+}
+
+@media screen and (max-width:770px){
+    nav ul li{
+        display: inline-flex;
+        margin: 7px 14px;
+        float: center;
+        font-size: 10px;
+}
+#info{
+    width: 100%;
+    height: 100%;
+    padding: 70px 0;
+    background: #efefef;
+     
+} 
+.banner-text h1{
+    font-size: 80px;
+    color: #212121;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+span{
+    color: #ff4321;
+}
+
+.banner-text p{
+    color: #606163;
+    line-height: 22px;
+    margin-left: 100px;
+}
+.info a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+.img-box{
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.img-box img{
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+} 
+.img-box:hover .back-img{
+    bottom: 40px;
+    
+}
+.img-box:hover .main-img{
+    left: 54%;
+}
+
+
+
+@media screen and (max-width:770px){
+    #info{
+        width: 100%;
+        height: 65%;
+        flex-basis: 100%;
+    }
+    .banner-text h1{
+        font-size: 40px;
+        flex-basis: 100%;
+        margin-top: 0;
+        
+    }
+    .banner-text p{
+        line-height: 15px;
+        margin-top: 10px;
+        flex-basis: 100%;
+}
+    .img-box img{
+        height: 50%;
+        margin-bottom: 0;
+        flex-basis: 100%;
+     }
+}
+
+
+/*--feature--*/
+#aboutme{
+    width: 100%;
+    height: 70%;
+    padding: 70px 0;
+}
+
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text p::after{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(orangered, white);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1{
+    font-size: 50px;
+}   
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features{
+    flex-basis: 50%;
+}
+
+.features-img{
+    flex-basis: 50%;
+    margin: auto;
+}
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: orangered;
+}
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.feature-icon .fa{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: orangered;
+    border: 1px solid orangered;
+}
+.feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+@media screen and (max-width:770px){
+    .title-text h1{
+        font-size: 35px;
+    } 
+    .features{
+        flex-basis: 100%;
+    }
+    .features-img{
+        flex-basis: 100%;
+    }
+    .features-img img{
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
+/*-- interest--*/
+#hobby{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+.hobby-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    
+}
+.single-hobby{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color:#fff;
+    position: relative;
+}
+.single-hobby img{
+    width: 100%;
+    border-radius: 7px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),orangered);
+    opacity: 0;
+    transition: 1s;
+}
+.single-hobby:hover .overlay{
+    opacity: 1;
+}
+.hobby-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: white;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.hobby-desc p{
+    font-size: 14px;
+}
+.single-hobby:hover .hobby-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px){
+    #hobby{
+        flex-basis: 100%;
+    }
+    .single-hobby{
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+    .hobby-desc p{
+    font-size: 10px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .single-hobby img{
+    width: 100%;
+    border-radius: 7px;
+}
+    .single-hobby:hover .hobby-desc{
+    bottom: 25% !important;
+    
+    }
+}
+
+/*--footer--*/
+#footer{
+    padding: 100px 0 20px;
+    background: lightgray;
+}
+.footer-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex: wrap;
+}
+.footer-left, .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+.footer-row p{
+   line-height: 35px;
+}
+.footer-left .fa,.footer-right .fa{
+    font-size: 20px;
+    color: orangered;
+    margin: 10px;
+}
+
+.social-links{
+    text-align: center;
+   
+}
+.social-links a{
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    color: #606163;
+    margin: 40px 10px 0;
+    cursor: pointer;
+}
+.social-links a:hover{
+    color: #ff4321;
+
+@media screen and (max-width: 770px){
+    .footer-left,.footer-right{
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
